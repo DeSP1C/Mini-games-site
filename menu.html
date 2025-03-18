@@ -38,32 +38,46 @@
 
         </div>
     </div>
-
-    <section class="main-menu" id="menu">
-        <h1>Ласкаво просимо в світ міні-ігор!</h1>
-        <div class="games">
-            <div class="game-card">
-                <a href="snake.html">
-                    <img src="static/images/snake.jpg" alt="Змійка">
-                </a>
+    <main>
+        <section class="main-menu" id="menu">
+            <h1>Ласкаво просимо в світ міні-ігор!</h1>
+            <div class="games">
+                <div class="game-card">
+                    <a href="snake.html">
+                        <img src="static/images/snake.jpg" alt="Змійка">
+                    </a>
+                </div>
+                <div class="game-card">
+                    <a href="tictactoe.html">
+                        <img src="static/images/tictactoe.jpg" alt="Хрестики-нолики">
+                    </a>
+                </div>
+                <div class="game-card">
+                    <a href="minesweeper.html">
+                        <img src="static/images/minesweeper.jpg" alt="Сапер">
+                    </a>
+                </div>
             </div>
-            <div class="game-card">
-                <a href="tictactoe.html">
-                    <img src="static/images/tictactoe.jpg" alt="Хрестики-нолики">
-                </a>
-            </div>
-            <div class="game-card">
-                <a href="minesweeper.html">
-                    <img src="static/images/minesweeper.jpg" alt="Сапер">
-                </a>
-            </div>
-        </div>
-    </section>
-
+        </section>
+    </main>
     <footer id="menu-footer">
         <p>Цей сайт створений для любителів міні-ігор. Пориньте в захопливі пригоди!</p>
         <p>© 2025 Усі права захищені. Розроблено Mini-games.</p>
     </footer>
+
+    <script>
+        const toggleBtn = document.querySelector('.toolbar-toggle');
+        const toolbar = document.querySelector('.toolbar');
+        const closeBtn = document.querySelector('.close-btn');
+
+        toggleBtn.addEventListener('click', () => {
+            toolbar.classList.toggle('active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            toolbar.classList.remove('active');
+        });
+    </script>
 </body>
 
 </html>
