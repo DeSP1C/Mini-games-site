@@ -1,0 +1,615 @@
+/*
+==============================
+
+Головні налаштування
+
+==============================
+*/
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: linear-gradient(to bottom, #1a1a40, #000);
+  color: #fff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+  color: #fff;
+  margin-block: 0;
+}
+
+/*
+==============================
+
+Дах
+
+==============================
+*/
+.header {
+  display: flex;
+  top: 0;
+  width: 100%;
+  padding: 12px 18px;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.header nav a {
+  margin-right: 20px;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.header button {
+  margin-right: 40px;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+
+.header {
+  background: linear-gradient(to right, #1a1a40, #2a2a60);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  cursor: default;
+  color: #00eaff;
+  text-shadow: 0 0 4px #00eaff;
+}
+
+.header nav a,
+.header button {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.header nav a:hover,
+.header button:hover {
+  color: #ff00ff;
+}
+
+/*
+==============================
+
+Меню "хамбургер"
+
+==============================
+*/
+
+.toolbar-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.toolbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  right: -300px;
+  max-width: 300px;
+  height: 100vh;
+  background: rgba(8, 9, 56, 0.4);
+  border-radius: 20px;
+  backdrop-filter: blur(3px);
+  transition: right 0.3s ease;
+  z-index: 2;
+}
+
+.toolbar.active {
+  right: 0;
+}
+
+.toolbar-content {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.toolbar-content .user-content {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding-top: 2px;
+  text-align: center;
+  flex-direction: column;
+  background: rgb(22, 18, 77. 0.8);
+}
+
+.toolbar-content a {
+  color: #fff;
+  text-decoration: none;
+  margin: 10px 0;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.toolbar-content a:hover {
+  color: #00eaff;
+}
+
+.close-btn {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/*
+==============================
+
+Головне меню
+
+==============================
+*/
+.main-menu {
+  padding: 100px 20px 50px;
+  text-align: center;
+}
+
+.main-menu h1 {
+  font-size: 36px;
+  color: #ff00ff;
+  text-shadow: 0 0 7px #ff00ff;
+  margin-bottom: 50px;
+  cursor: default;
+}
+
+.games {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.game-card {
+  background: rgba(57, 42, 103, 0.439);
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+
+  transition: transform 0.3s;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+}
+
+.game-card img {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  background: #333;
+  border-radius: 5px;
+}
+
+.game-card h2 {
+  margin: 15px 0;
+  color: #00eaff;
+}
+
+.game-card button {
+  background: #ff00ff;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.game-card button:hover {
+  background: #00eaff;
+  color: #000;
+}
+
+.game-card a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/*
+==============================
+
+Кнопка "Меню"
+
+==============================
+*/
+
+.menu-button {
+  display: block;
+  background: #ff00ff;
+  border: none;
+  padding: 10px 20px;
+  margin: auto;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.menu-button:hover {
+  background: #00eaff;
+  color: #000;
+}
+
+/*
+==============================
+
+Подвал
+
+==============================
+*/
+
+
+footer {
+  position: fixed;
+  background: #1a1a40;
+  padding: 17px;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  font-size: 15px;
+  color: #ccc;
+  margin: 5px 0;
+}
+
+
+/*
+==============================
+
+Профіль
+
+==============================
+*/
+
+.profile-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  padding: 100px 20px 50px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/*
+==============================
+
+Аватар (профіль)
+
+==============================
+*/
+
+.avatar-on-profile {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #00eaff;
+  box-shadow: 0 0 10px #00eaff;
+}
+
+.avatar-on-profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/*
+==============================
+
+Aside (профіль)
+
+==============================
+*/
+
+.aside-profile {
+  max-width: 200px;
+}
+
+.user-profile-statistic {
+  background: rgba(31, 34, 87, 0.8);
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.user-profile-statistic h6 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.user-profile-statistic .item-box {
+  width: 100%;
+}
+
+.user-profile-statistic .stats-data {
+  font-size: 22px;
+  font-weight: bold;
+  color: #00eaff;
+}
+
+.user-profile-statistic label {
+  font-weight: 700;
+}
+
+.aside-profile .profile-box-content {
+  border-radius: 12px;
+  box-shadow: 0 0 10px #00eaff80;
+}
+
+/*
+==============================
+
+Улюблені ігри (профіль)
+
+==============================
+*/
+
+.user-profile-favourite-game {
+  display: flex;
+  flex-wrap: wrap;
+  background: #1f2257cc;
+  padding: 20px;
+  border-radius: 12px;
+  flex-grow: 1;
+  max-width: 400px;
+  height: 387px;
+  box-shadow: 0 0 10px #ff00ff80;
+}
+
+
+
+/*
+==============================
+
+Остання активність (профіль)
+
+==============================
+*/
+
+.user-profile-recent-activity {
+  background: #1f2257cc;
+  padding: 20px;
+  flex-grow: 1;
+  max-width: 500px;
+}
+
+
+/*
+==============================
+
+Шріфти (профіль)
+
+==============================
+*/
+
+.profile-box-content h5 {
+  margin-bottom: 0px;
+  padding-left: 0;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.profile-box-content h6 {
+  margin-bottom: 0px;
+  padding-left: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.profile-box-content p {
+  font-size: 16px;
+  font-weight: 400;
+  padding-left: 0;
+}
+
+/*
+==============================
+
+Регістрація
+
+==============================
+*/
+
+
+
+.registration-menu {
+  padding: 200px 0px 50px 15px;
+  text-align: center;
+}
+
+.registration-menu h1 {
+  font-size: 32px;
+  color: #ff00ff;
+  text-shadow: 0 0 4px #ff00ff;
+  margin-bottom: 20px;
+  cursor: default;
+}
+
+.registration-form-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-group label {
+  flex-grow: 1;
+  font-size: 18px;
+  font-weight: 600;
+  color: #00eaff;
+  text-shadow: 0 0 4px #00eaff;
+  overflow: hidden;
+  margin-right: 8px;
+}
+
+.form-group input {
+  flex-grow: 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #00eaff;
+  box-shadow: 0 0 10px #00eaff;
+  background: rgba(0, 234, 255, 0.2);
+  color: #fff;
+  transition: 0.1s;
+}
+
+.form-group input:focus {
+  background: rgba(0, 234, 255, 0.4);
+}
+
+.form-group input::placeholder {
+  color: #fff;
+  text-shadow: 0 0 2px #ccc;
+}
+
+.registration-form-container .menu-button {
+  margin: 5px auto 17px auto;
+}
+
+/*
+==============================
+
+Вхід(логін)
+
+==============================
+*/
+
+.login-menu {
+  padding: 250px 0px 50px 15px;
+  text-align: center;
+}
+
+.login-menu h1 {
+  font-size: 32px;
+  color: #ff00ff;
+  text-shadow: 0 0 4px #ff00ff;
+  margin-bottom: 20px;
+  cursor: default;
+}
+
+.registration-form-container a {
+  color: #ff00ff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.registration-form-container a:hover {
+  color: #00eaff;
+}
+
+/*
+==============================
+
+Ігри
+
+==============================
+*/
+
+.game-main-section {
+  margin: 20px 100px 20px 100px;
+}
+
+.game-window {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  padding: 340px 20px 340px 20px;
+  border-radius: 15px;
+  background: #fff;
+}
+
+.other-games-window {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 30px;
+}
+
+.other-games-window .game-card {
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  border-radius: 25%;
+  overflow: hidden;
+}
+
+.other-games-window .game-card img {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background: #333;
+  border-radius: 5px;
+}
+
+/*
+==============================
+
+Контекст вікна гри
+
+==============================
+*/
+
+.game-window span {
+  font-size: 36px;
+  color: #000;
+}
+
+.game-window {
+  align-items: center;
+  padding: 310px 20px 310px 20px;
+}
