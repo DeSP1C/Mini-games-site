@@ -85,10 +85,11 @@ h6 {
   background: linear-gradient(to right, var(--color-bg-primary), var(--color-bg-secondary));
 }
 
-.logo {
+.logo a {
   font-size: 26px;
   font-weight: bold;
-  cursor: default;
+  cursor: pointer;
+  text-decoration: none;
   color: var(--color-primary);
   text-shadow: 0 0 4px var(--color-primary);
 }
