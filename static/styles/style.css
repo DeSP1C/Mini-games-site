@@ -253,6 +253,12 @@ footer {
   position: fixed;
 }
 
+@media (min-width: 300px){
+  #main-footer {
+    position: static;
+  }
+}
+
 @media (min-width: 320px) {
   footer {
     background: var(--color-bg-primary);
@@ -274,6 +280,8 @@ footer {
     width: 100%;
   }
 }
+
+
 
 footer p {
   font-size: 15px;
