@@ -80,7 +80,7 @@ h6 {
   background: linear-gradient(to right, var(--color-bg-primary), var(--color-bg-secondary));
 }
 
-#logo{
+#logo {
   font-size: 26px;
   font-weight: bold;
   cursor: pointer;
@@ -90,7 +90,7 @@ h6 {
   transition: 0.1s;
 }
 
-#logo:hover{
+#logo:hover {
   color: var(--color-white);
 }
 
@@ -106,17 +106,17 @@ h6 {
   color: var(--color-secondary);
 }
 
-.header .dropdown-menu{
+.header .dropdown-menu {
   background-color: var(--color-bg-primary);
   border-radius: 15px;
 }
 
-.header .dropdown-menu .dropdown-item{
+.header .dropdown-menu .dropdown-item {
   background-color: none;
   width: auto;
 }
 
-.dropdown-item:hover{
+.dropdown-item:hover {
   background-color: inherit !important;
 }
 
@@ -253,8 +253,8 @@ footer {
   position: fixed;
 }
 
-@media (min-width: 300px){
-  #main-footer {
+@media (max-width: 602px) {
+  #menu-footer {
     position: static;
   }
 }
