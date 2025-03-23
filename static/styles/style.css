@@ -59,12 +59,7 @@ h6 {
 ==============================
 */
 .header {
-  display: flex;
-  top: 0;
   width: 100%;
-  padding: 12px 18px;
-  justify-content: space-between;
-  align-items: center;
   z-index: 1;
 }
 
@@ -85,13 +80,18 @@ h6 {
   background: linear-gradient(to right, var(--color-bg-primary), var(--color-bg-secondary));
 }
 
-.logo a {
+#logo{
   font-size: 26px;
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
   color: var(--color-primary);
   text-shadow: 0 0 4px var(--color-primary);
+  transition: 0.1s;
+}
+
+#logo:hover{
+  color: var(--color-white);
 }
 
 .header nav a,
@@ -106,76 +106,21 @@ h6 {
   color: var(--color-secondary);
 }
 
-/*
-==============================
-
-Меню "хамбургер"
-
-==============================
-*/
-
-.toolbar-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
+.header .dropdown-menu{
+  background-color: var(--color-bg-primary);
+  border-radius: 15px;
 }
 
-.toolbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  right: -300px;
-  max-width: 300px;
-  height: 100vh;
-  background: rgba(8, 9, 56, 0.4);
-  border-radius: 20px;
-  backdrop-filter: blur(3px);
-  transition: right 0.3s ease;
-  z-index: 2;
+.header .dropdown-menu .dropdown-item{
+  background-color: none;
+  width: auto;
 }
 
-.toolbar.active {
-  right: 0;
+.dropdown-item:hover{
+  background-color: inherit !important;
 }
 
-.toolbar-content {
-  margin: 20px;
-  display: flex;
-  flex-direction: column;
-}
 
-.toolbar-content .user-content {
-  display: flex;
-  position: fixed;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  padding-top: 2px;
-  text-align: center;
-  flex-direction: column;
-  background: rgb(22, 18, 77. 0.8);
-}
-
-.toolbar-content a {
-  color: var(--color-white);
-  text-decoration: none;
-  margin: 10px 0;
-  font-size: 18px;
-  transition: color 0.3s;
-}
-
-.toolbar-content a:hover {
-  color: var(--color-primary);
-}
-
-.close-btn {
-  align-self: flex-end;
-  background: none;
-  border: none;
-  color: var(--color-white);
-  font-size: 20px;
-  cursor: pointer;
-}
 
 /*
 ==============================
