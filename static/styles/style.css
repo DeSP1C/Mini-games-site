@@ -253,18 +253,17 @@ h6 {
 */
 
 footer {
-  position: fixed;
+  position: static;
 }
 
-@media (max-width: 602px) {
+@media (min-width: 604px) {
   #menu-footer {
-    position: static;
+    position: fixed;
   }
 }
 
 @media (min-width: 320px) {
   footer {
-    position: static;
     background: var(--color-bg-primary);
     padding: 10px;
     text-align: center;
@@ -274,10 +273,9 @@ footer {
   }
 }
 
-@media (min-width: 828px) {
-
+@media (min-width: 828px) and (min-height: 600px) {
   footer {
-    position: fixed;
+    position: static;
     background: var(--color-bg-primary);
     padding: 17px;
     text-align: center;
