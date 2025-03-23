@@ -101,9 +101,12 @@ h6 {
   transition: 0.2s;
 }
 
-.header nav a:hover,
-.header button:hover {
+.header nav a:hover{
   color: var(--color-secondary);
+}
+
+.header button:hover {
+  color: var(--color-bg-secondary);
 }
 
 .header .dropdown-menu {
@@ -261,6 +264,7 @@ footer {
 
 @media (min-width: 320px) {
   footer {
+    position: fixed;
     background: var(--color-bg-primary);
     padding: 10px;
     text-align: center;
@@ -273,6 +277,7 @@ footer {
 @media (min-width: 828px) {
 
   footer {
+    position: fixed;
     background: var(--color-bg-primary);
     padding: 17px;
     text-align: center;
