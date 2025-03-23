@@ -264,7 +264,7 @@ footer {
 
 @media (min-width: 320px) {
   footer {
-    position: fixed;
+    position: static;
     background: var(--color-bg-primary);
     padding: 10px;
     text-align: center;
