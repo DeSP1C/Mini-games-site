@@ -261,7 +261,9 @@ footer {
   bottom: 0;
 }
 
-@media (max-width: 395px) { /*Телефон. Головне меню. */
+@media (max-width: 395px) {
+
+  /*Телефон. Головне меню. */
   #menu-footer {
     position: static;
     bottom: 0;
@@ -274,14 +276,14 @@ footer {
   }
 }
 
-@media (max-height: 650px){
-  #login-footer{
+@media (max-height: 650px) {
+  #login-footer {
     position: static;
   }
 }
 
 @media (max-width: 827px) {
-  #profile-footer{
+  #profile-footer {
     position: static;
   }
 }
@@ -530,7 +532,7 @@ Aside (профіль)
 */
 
 .login-menu {
-  padding: 250px 0px 50px 15px;
+  padding: 250px 0px 50px 0px;
   text-align: center;
 }
 
